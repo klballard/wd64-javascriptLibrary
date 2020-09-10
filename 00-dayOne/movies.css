@@ -1,0 +1,18 @@
+body{
+    background-color: lightskyblue;
+}
+
+div.main{
+    border: 2em solid black;
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.align{
+    display: flex;
+    justify-content: space-evenly;
+}
