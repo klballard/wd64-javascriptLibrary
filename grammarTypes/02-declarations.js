@@ -15,7 +15,7 @@ let b = 1;
 
 console.log(a + b);
 
-// RESTRICTIONS
+//? RESTRICTIONS
 /* 
     - a variable name must being with a letter, underscore or dollar sign
     - numbers may follow the above characters BUT cannot come first
