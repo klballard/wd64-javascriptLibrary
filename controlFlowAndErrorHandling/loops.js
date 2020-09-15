@@ -95,6 +95,14 @@ console.log(fullName);
 
 
 /*
+  1) We are taking the value of the "n" index and declaring the position of 0
+  2) We assign our empty varibale to equal that positioned value.
+  3) If that index is 0, we will take that value and run a ".toUpperCase()"" method on it. 
+  4) If the index is NOT 0, we still want to include it into our empty variable and utilize our += expression so it knows to add the next value (or n++).
+  5) If the index is NOT 0, we want t run a ".toLowerCase()" method so that all letters are in proper case.
+
+
+/*
 
 ! FOR OF LOOPS
 
@@ -123,3 +131,34 @@ for(pos of indexArr) {
     for in loops: loops through properties of an object
     for of loops: loops over iterable objects as an arrays and strings *strings can be accessed much in the same way as arrays
 */
+
+
+//! Challenge 2: Take Home Challenge
+/*  
+Create a switch statement that takes in a value (number) that represents a grade.  If it is True, console log that they are passing with the correct letter grade.
+*   A: 89-100
+*   B: 79-88
+*   C: 66-78
+*   D: 59-65
+*   F: 0-59
+*/
+
+let grade = 100;
+
+switch (true) {
+    case grade >= 89 && grade <= 100:
+        console.log("Congratulations, you did excellent!! A!");
+        break;
+    case grade >= 79 && grade <=88:
+        console.log("Overall, not (B)ad at all! You passed!");
+        break;
+    case grade >= 66 && grade <= 78:
+        console.log("C! Average, but room for improvement.");
+        break;
+    case grade >= 59 && grade <= 65:
+        console.log("D. I'm sorry, but you're not quite there.");
+        break;
+    default:
+        console.log("F for effort. Keep practicing!");
+        break;
+}
