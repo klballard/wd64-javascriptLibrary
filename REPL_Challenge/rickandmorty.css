@@ -1,0 +1,15 @@
+.rickClass {
+    border-radius: 15px;
+    border: thin black solid;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.mortyClass {
+    border-radius: 15px;
+    border: thin black solid;
+    position: relative;
+    display: block;
+    margin: auto;
+}

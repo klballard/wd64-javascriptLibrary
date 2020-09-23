@@ -69,7 +69,9 @@ let spaceJam = {
     }
 }
 
-// Object.keys() will return an array of strings that represent the properties of that object.
+//!!!!!!!!!!!!!!!!! Object.keys() will return an array of strings that represent the properties of that object.
+
+//! USE OBJ KEYS TO FIGURE OUT THE PATHING, LIKE WHEN TO SWITCH BETWEEN [] AND . NOTATION
 console.log(Object.keys(spaceJam.toonSquad));  // String of Keys
 
 console.log(Object.keys(spaceJam.toonSquad.tDevil));  // String of the index numbers of that string value

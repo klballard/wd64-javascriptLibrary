@@ -14,14 +14,14 @@ function hi(){
     console.log('Hi!');
 }
 /*
-//1 Keyword  2 Name of the function and parenthesis for parameter
+1 Keyword  2 Name of the function and parenthesis for parameter
 
-// 1          2       3
+/ 1          2       3
 function functionName() {
-//    4
+/    4
     return value
 };
-//   5
+/   5
 functionName()
 */
 // (1) Keyword
@@ -80,3 +80,31 @@ function greeting(first, last) {
 //greeting(firstName);
 //greeting(lastName);
 greeting(firstName,lastName);
+
+
+
+// REPL Pratice for loops and functions
+let i = 0;
+
+for(let i = 0; i <= 10; i++);
+
+function isEven(i) {
+    i = Number(i);
+    return i === 0 || !!(i && !(i%2));
+}
+function isOdd(i) {
+    return isEven(Number(i) + 1);
+    console.log('the number is odd');
+}
+
+for ( let j = 0; j <= 10; j +=2) {
+    console.log(j);
+  }
+
+  let count = 0;
+  for ( ;  count < 9; ++count ) {
+    console.log(count);
+  }
+
+
+
