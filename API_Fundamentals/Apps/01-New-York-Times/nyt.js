@@ -85,13 +85,13 @@ function displayResults(json) {
             let img = document.createElement('img');
             let para = document.createElement('p');
             let clearfix = document.createElement('div');
-      let current = articles[i]; //2
+      let current = articles[i]; //2  //setting current = the indexed val of articles
       console.log("Current:", current); //3
 
-      link.href = current.web_url; //4
-      link.textContent = current.headline.main; //5
+      link.href = current.web_url; //4   //this refers back to line 84, diving farther into the fetched API using dot notation
+      link.textContent = current.headline.main; //5  //refers back to 84
 
-      para.textContent = 'Keywords: ';
+      para.textContent = 'Keywords: ';  // refers back to 86
 
       for(let j = 0; j < current.keywords.length; j++) {
           let span = document.createElement('span');
