@@ -7,9 +7,5 @@ const shoppingList = [
 
 console.log(shoppingList);
 
-const a = shoppingList[0];
-const b = shoppingList[1];
-const c = shoppingList[2];
-const d = shoppingList[3];
-
-console.log([a + b + c + d]);
+const [arrayZero, arrayOne, arrayTwo, arrayThree] = shoppingList;
+console.log([...arrayZero, ...arrayOne, ...arrayTwo, ...arrayThree]);

@@ -6,7 +6,7 @@
     - Classes are functions.
     - Classes act as a blueprint for creating objects.
 
-      ex: model could be a property of a class of Automobile. Each new automovile we create that's a copy of our original class and could have a different value for the property model.
+      ex: model could be a property of a class of Automobile. Each new automobile we create that's a copy of our original class and could have a different value for the property model.
     
     - Body of a class is between {}
     - Constructor method is a special method for creating and initializing an object that was created with a class.
