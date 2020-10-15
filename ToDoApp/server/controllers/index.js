@@ -9,3 +9,10 @@ index.js is also the outlet point for all controllers
 Current goal: Create a test controller
 */
 
+const TestController = require('./TestController');
+const UsersController = require('./UsersController');
+
+module.exports = {
+    test: TestController,
+    users: UsersController
+}

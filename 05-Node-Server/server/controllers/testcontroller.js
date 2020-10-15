@@ -45,7 +45,7 @@ router.post('/three', function (req, res) {
         console.log("Test three went through!")
 });
 
-module.exports = router;
+
 
 /*
 ! STEP 4 - Use this with Postman (section 5)
@@ -127,6 +127,29 @@ router.get('/helloclient', function (req, res) {
 })
 
 
+/*
+! GET: /one
+*/
+router.get('/one', function (req, res) {
+
+    TestModel
+        .findAll({
+            attributes: ['id', 'testdata']
+        })
+        .then(
+            function findAllSuccess(data) {
+                console.log("Controller data:", data);
+                res.json(data);
+            },
+            function findAllError(err) {
+                res.send(500, err.message);
+            }
+        );
+});
+
+
+
+module.exports = router;
 /*
 
 ! Section 1 Notes

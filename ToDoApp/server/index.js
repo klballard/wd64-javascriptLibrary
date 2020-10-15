@@ -1,11 +1,14 @@
 const { Router, response } = require('express');
 const Express = require('express');
 
+const applicationSequelizeObject = require('./db');
 const ApplicationControllers = require('./controllers/index');
+
 
 const expressApplicationObject = new Express();
 
 expressApplicationObject.use('/test', ApplicationControllers.test);
+expressApplicationObject.use('/users', ApplicationControllers.users);
 
 expressApplicationObject.get('/', (request, response) => {
     console.log('[server]: Root GET request received');
@@ -16,12 +19,30 @@ expressApplicationObject.get('/', (request, response) => {
 });
 
 
-expressApplicationObject.listen(9001, () => {
-    console.log('[server]: App is listening on port 9001');
-});
+
+// Startup Procedure
+// Verify the connection to the POSTGRES database
+// Synchronize our database with our models
+// listen on our specified port
+
+applicationSequelizeObject.authenticate()
+    .then(() => applicationSequelizeObject.sync())
+    .then(() => {
+        expressApplicationObject.listen(9001, () => {
+            console.log('[server]: App is listening on port 9001');
+        });
+
+
+
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+
 
 // JSON in a request is a STRING
-
+/*
 expressApplicationObject.use(Express.json());
 
 expressApplicationObject.post('/challenge', (request, response) => {
@@ -32,7 +53,7 @@ expressApplicationObject.post('/challenge', (request, response) => {
 });
 
 
-/*
+
 challenge receive a POST request at the route /challenge
 takes two values inside of the body:
  name - string for a name
