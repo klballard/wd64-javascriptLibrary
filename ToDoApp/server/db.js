@@ -1,8 +1,5 @@
-const Sequelize = require("sequelize");
+const { Sequelize } = require('sequelize');
 
-const applicationSequelizeObject = new Sequelize("todo-db", "kyle", "password", {
-    host: 'localhost',
-    dialect: 'postgres'
-});
+const db = new Sequelize(process.env.DB_CONNECTION_STRING);
 
-module.exports = applicationSequelizeObject;
+module.exports = db;
